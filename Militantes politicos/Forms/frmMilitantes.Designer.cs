@@ -46,13 +46,16 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chbFecha = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.labFecha1 = new System.Windows.Forms.Label();
             this.labFecha2 = new System.Windows.Forms.Label();
-            this.datepick = new System.Windows.Forms.DateTimePicker();
+            this.dtpTermino = new System.Windows.Forms.DateTimePicker();
             this.ofdCargar = new System.Windows.Forms.OpenFileDialog();
             this.sstAfiliados = new System.Windows.Forms.StatusStrip();
             this.tsslAfiliados = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnFecha = new System.Windows.Forms.Button();
+            this.labSource = new System.Windows.Forms.Label();
+            this.labDir = new System.Windows.Forms.Label();
             this.msMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).BeginInit();
             this.sstAfiliados.SuspendLayout();
@@ -142,7 +145,7 @@
             this.cmbMunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMunicipio.FormattingEnabled = true;
             this.cmbMunicipio.Items.AddRange(new object[] {
-            ""});
+            "Seleccionar"});
             this.cmbMunicipio.Location = new System.Drawing.Point(135, 65);
             this.cmbMunicipio.Name = "cmbMunicipio";
             this.cmbMunicipio.Size = new System.Drawing.Size(130, 24);
@@ -172,57 +175,65 @@
             // 
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Entidad";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Municipio";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Nombre";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 250;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Fecha de Afiliación";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Estatus";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // chbFecha
             // 
             this.chbFecha.AutoSize = true;
             this.chbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbFecha.Location = new System.Drawing.Point(17, 344);
+            this.chbFecha.Location = new System.Drawing.Point(19, 344);
             this.chbFecha.Name = "chbFecha";
             this.chbFecha.Size = new System.Drawing.Size(64, 20);
             this.chbFecha.TabIndex = 6;
             this.chbFecha.Text = "Fecha";
             this.chbFecha.UseVisualStyleBackColor = true;
+            this.chbFecha.CheckedChanged += new System.EventHandler(this.chbFecha_CheckedChanged);
             // 
-            // dateTimePicker1
+            // dtpInicio
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 367);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dtpInicio.Enabled = false;
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpInicio.Location = new System.Drawing.Point(120, 371);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.Size = new System.Drawing.Size(145, 20);
+            this.dtpInicio.TabIndex = 7;
             // 
             // labFecha1
             // 
             this.labFecha1.AutoSize = true;
             this.labFecha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFecha1.Location = new System.Drawing.Point(16, 367);
+            this.labFecha1.Location = new System.Drawing.Point(16, 371);
             this.labFecha1.Name = "labFecha1";
             this.labFecha1.Size = new System.Drawing.Size(79, 16);
             this.labFecha1.TabIndex = 8;
@@ -232,19 +243,20 @@
             // 
             this.labFecha2.AutoSize = true;
             this.labFecha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFecha2.Location = new System.Drawing.Point(16, 397);
+            this.labFecha2.Location = new System.Drawing.Point(16, 401);
             this.labFecha2.Name = "labFecha2";
             this.labFecha2.Size = new System.Drawing.Size(98, 16);
             this.labFecha2.TabIndex = 9;
             this.labFecha2.Text = "Fecha Término";
             // 
-            // datepick
+            // dtpTermino
             // 
-            this.datepick.Enabled = false;
-            this.datepick.Location = new System.Drawing.Point(120, 397);
-            this.datepick.Name = "datepick";
-            this.datepick.Size = new System.Drawing.Size(200, 20);
-            this.datepick.TabIndex = 10;
+            this.dtpTermino.Enabled = false;
+            this.dtpTermino.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpTermino.Location = new System.Drawing.Point(120, 401);
+            this.dtpTermino.Name = "dtpTermino";
+            this.dtpTermino.Size = new System.Drawing.Size(145, 20);
+            this.dtpTermino.TabIndex = 10;
             // 
             // ofdCargar
             // 
@@ -266,16 +278,49 @@
             this.tsslAfiliados.Size = new System.Drawing.Size(59, 17);
             this.tsslAfiliados.Text = "Afiliados :";
             // 
+            // btnFecha
+            // 
+            this.btnFecha.Location = new System.Drawing.Point(289, 397);
+            this.btnFecha.Name = "btnFecha";
+            this.btnFecha.Size = new System.Drawing.Size(122, 23);
+            this.btnFecha.TabIndex = 12;
+            this.btnFecha.Text = "Buscar por fecha";
+            this.btnFecha.UseVisualStyleBackColor = true;
+            this.btnFecha.Click += new System.EventHandler(this.btnFecha_Click);
+            // 
+            // labSource
+            // 
+            this.labSource.AutoSize = true;
+            this.labSource.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labSource.Location = new System.Drawing.Point(389, 29);
+            this.labSource.Name = "labSource";
+            this.labSource.Size = new System.Drawing.Size(206, 24);
+            this.labSource.TabIndex = 13;
+            this.labSource.Text = "Archivo cargado desde";
+            // 
+            // labDir
+            // 
+            this.labDir.AutoSize = true;
+            this.labDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDir.Location = new System.Drawing.Point(389, 61);
+            this.labDir.Name = "labDir";
+            this.labDir.Size = new System.Drawing.Size(231, 20);
+            this.labDir.TabIndex = 14;
+            this.labDir.Text = "No se ha cargado nigún archivo";
+            // 
             // frmMilitantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 466);
+            this.Controls.Add(this.labDir);
+            this.Controls.Add(this.labSource);
+            this.Controls.Add(this.btnFecha);
             this.Controls.Add(this.sstAfiliados);
-            this.Controls.Add(this.datepick);
+            this.Controls.Add(this.dtpTermino);
             this.Controls.Add(this.labFecha2);
             this.Controls.Add(this.labFecha1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpInicio);
             this.Controls.Add(this.chbFecha);
             this.Controls.Add(this.dgvInformacion);
             this.Controls.Add(this.cmbMunicipio);
@@ -310,10 +355,10 @@
         private System.Windows.Forms.ToolStripMenuItem limpiarDatosToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvInformacion;
         private System.Windows.Forms.CheckBox chbFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.Label labFecha1;
         private System.Windows.Forms.Label labFecha2;
-        private System.Windows.Forms.DateTimePicker datepick;
+        private System.Windows.Forms.DateTimePicker dtpTermino;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -323,6 +368,9 @@
         private System.Windows.Forms.OpenFileDialog ofdCargar;
         private System.Windows.Forms.StatusStrip sstAfiliados;
         private System.Windows.Forms.ToolStripStatusLabel tsslAfiliados;
+        private System.Windows.Forms.Button btnFecha;
+        private System.Windows.Forms.Label labSource;
+        private System.Windows.Forms.Label labDir;
     }
 }
 
