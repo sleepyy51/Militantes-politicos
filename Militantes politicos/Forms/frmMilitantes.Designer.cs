@@ -123,6 +123,7 @@
             // labNombreEstado
             // 
             this.labNombreEstado.AutoSize = true;
+            this.labNombreEstado.BackColor = System.Drawing.SystemColors.Window;
             this.labNombreEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labNombreEstado.Location = new System.Drawing.Point(131, 28);
             this.labNombreEstado.Name = "labNombreEstado";
@@ -267,15 +268,16 @@
             // 
             this.sstAfiliados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsslAfiliados});
-            this.sstAfiliados.Location = new System.Drawing.Point(0, 444);
+            this.sstAfiliados.Location = new System.Drawing.Point(0, 441);
             this.sstAfiliados.Name = "sstAfiliados";
-            this.sstAfiliados.Size = new System.Drawing.Size(801, 22);
+            this.sstAfiliados.Size = new System.Drawing.Size(801, 25);
             this.sstAfiliados.TabIndex = 11;
             // 
             // tsslAfiliados
             // 
+            this.tsslAfiliados.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsslAfiliados.Name = "tsslAfiliados";
-            this.tsslAfiliados.Size = new System.Drawing.Size(59, 17);
+            this.tsslAfiliados.Size = new System.Drawing.Size(75, 20);
             this.tsslAfiliados.Text = "Afiliados :";
             // 
             // btnFecha
