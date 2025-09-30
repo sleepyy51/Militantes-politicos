@@ -261,8 +261,7 @@
             // 
             // ofdCargar
             // 
-            this.ofdCargar.FileName = "Archivo | .xlsx";
-            this.ofdCargar.InitialDirectory = "Descargas";
+            this.ofdCargar.Filter = "Archivos de Excel|*.xlsx";
             // 
             // sstAfiliados
             // 
