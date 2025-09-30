@@ -301,6 +301,7 @@
             // labDir
             // 
             this.labDir.AutoSize = true;
+            this.labDir.BackColor = System.Drawing.SystemColors.Window;
             this.labDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labDir.Location = new System.Drawing.Point(389, 61);
             this.labDir.Name = "labDir";
